@@ -8,4 +8,4 @@
 
 ##
 
-<p> Created by Erick Araújo. <a href="www.linkedin.com/in/araujoerick09">LinkedIn</a></p>
+<p> Created by Erick Araújo. <a href="https://www.linkedin.com/in/araujoerick09">LinkedIn</a></p>
