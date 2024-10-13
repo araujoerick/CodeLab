@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react'
+import { Header } from './components/Header'
+import SneakerItem from './components/SneakerItem'
 
 function App() {
   const [tenis, setTenis] = useState([])
@@ -23,65 +25,35 @@ function App() {
 
   return (
     <div className="archivo-font">
-      <header className="">
-        <p className="text-center text-2xl p-2">
-          Frete grátis para todo o Brasil
-        </p>
-        <div className="bg-[url('./src/assets/image-michael-jordan.png')] text-white py-24">
-          <div className="flex flex-col gap-8 m-auto max-w-screen-xl px-8">
-            <div className="flex items-center">
-              <img src="./src/assets/logo-jordan.svg" alt="" />
-              <p className="text-2xl font-medium">JordanShoes</p>
-            </div>
-            <div>
-              <h2 className="text-[2rem] mb-4">A melhor loja de Jordan</h2>
-              <p className="text-2xl max-w-[39ch]">
-                O tênis Jordan é fruto de uma velha e forte parceria entre a
-                Nike e o jogador Michael Jordan.
-              </p>
-            </div>
-          </div>
+      <Header />
+      <main className="md:mt-20 mt-14 m-auto max-w-screen-xl px-8 flex flex-col md:gap-16 gap-10">
+        <div className="text-center flex flex-col gap-6 m-auto">
+          <h1 className="md:text-[2rem] text-2xl font-semibold">
+            Os melhores em só lugar
+          </h1>
+          <p className="md:text-2xl sm:text-base text-sm max-w-[44ch]">
+            A marca Jordan na JordanShoes é a escolha certa para os amantes de
+            sneakers que buscam estilo e conforto.
+          </p>
         </div>
-      </header>
-      {loading ? (
-        <p>Carregando...</p>
-      ) : (
-        <>
-          <main className="mt-20 m-auto max-w-screen-xl px-8 flex flex-col gap-8">
-            <div className="text-center flex flex-col gap-6 m-auto">
-              <h1 className="text-[2rem] font-semibold">
-                Os melhores em só lugar
-              </h1>
-              <p className="text-2xl max-w-[44ch]">
-                A marca Jordan na JordanShoes é a escolha certa para os amantes
-                de sneakers que buscam estilo e conforto.
-              </p>
-            </div>
-            <div className="flex flex-1 justify-center flex-wrap gap-8 mb-14">
-              {tenis.map(tenisItem => (
-                <div key={tenisItem.id} className="w-96">
-                  <div className="bg-[#F3F7FF] px-20">
-                    <img
-                      src={tenisItem.imagem}
-                      alt={tenisItem.nome}
-                      className="w-full"
-                    />
-                  </div>
-                  <div className="flex flex-col gap-1">
-                    <h3 className="text-lg font-medium">{tenisItem.nome}</h3>
-                    <p className="font-medium text-[#7CA2F4]">
-                      {tenisItem.categoria}
-                    </p>
-                    <p className="mt-3 text-xl font-medium">
-                      R$ {tenisItem.preco}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </main>
-        </>
-      )}
+        {loading ? (
+          <div className="flex justify-center mt-10">
+            <div className="loader"> </div>
+          </div>
+        ) : (
+          <div className="flex flex-1 justify-center flex-wrap gap-8 mb-14">
+            {tenis.map(item => (
+              <SneakerItem
+                key={item.id}
+                nome={item.nome}
+                imagem={item.imagem}
+                categoria={item.categoria}
+                preco={item.preco}
+              />
+            ))}
+          </div>
+        )}
+      </main>
     </div>
   )
 }
