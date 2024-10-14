@@ -1,7 +1,18 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import HeroImage from '../assets/image-michael-jordan.png'
+import HeroImageSm from '../assets/image-michael-jordan-sm.png'
 
 export const Header = () => {
+  const [matches, setMatches] = useState(
+    window.matchMedia('(max-width: 768px)').matches
+  )
+
+  useEffect(() => {
+    window
+      .matchMedia('(max-width: 768px)')
+      .addEventListener('resize', e => setMatches(e.matches))
+  }, [])
+
   return (
     <header>
       <p className="text-center md:text-2xl sm:text-base text-sm p-2">
@@ -10,7 +21,11 @@ export const Header = () => {
       <div className="text-white">
         <div
           className="hero-image"
-          style={{ backgroundImage: `url(${HeroImage})` }}
+          style={
+            !matches
+              ? { backgroundImage: `url(${HeroImage})` }
+              : { backgroundImage: `url(${HeroImageSm})` }
+          }
         >
           <div className="flex flex-col gap-8 m-auto max-w-screen-xl px-8 py-24">
             <div className="flex items-center">
