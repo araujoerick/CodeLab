@@ -6,3 +6,21 @@ body {
   color: white;
   background-image: url("./src/assets/background.png");
 }
+
+.font-archivo {
+  font-family: "Archivo", sans-serif;
+}
+
+.font-andada-pro {
+  font-family: "Andada Pro", serif;
+}
+
+.font-open-sans {
+  font-family: "Open Sans", sans-serif;
+}
+
+.roboto-bold {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}

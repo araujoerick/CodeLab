@@ -1,5 +1,6 @@
 import ilustracao from './assets/ghosts.png'
 import Logo from './assets/logo.svg'
+import Play from './assets/Play.svg'
 import LinkGoogle from './assets/link-google.png'
 import LinkFacebook from './assets/link-facebook.png'
 import LinkTwitter from './assets/link-twitter.png'
@@ -35,28 +36,39 @@ export function App() {
           </ul>
         </nav>
       </header>
-      <main>
-        <section className="flex items-center justify-between max-w-screen-xl px-8 m-auto">
+      <main className="flex items-center justify-between max-w-screen-xl px-8 m-auto">
+        <div className="flex flex-col gap-8">
           <div>
-            <p>HAYAO MIYAZAKI</p>
-            <h1>A VIAGEM DE CHIHIRO</h1>
-            <p>
-              Chihiro chega a um mundo mágico dominado por uma bruxa. Aqueles
-              que a desobedecem são transformados em animais.
+            <p className="font-open-sans font-bold text-xl uppercase mb-2">
+              HAYAO MIYAZAKI
             </p>
-            <div>
-              <button className="bg-red-300" type="button">
-                assistir agora
-              </button>
-              <button className="bg-red-300" type="button">
-                assista o trailer
-              </button>
-            </div>
+            <h1 className="font-andada-pro font-extrabold text-[64px] leading-[1.1] uppercase max-w-[10ch]">
+              A VIAGEM DE CHIHIRO
+            </h1>
           </div>
-          <div>
-            <img src={ilustracao} alt="" />
+          <p className="font-archivo font-medium text-2xl leading-normal max-w-[36ch]">
+            Chihiro chega a um mundo mágico dominado por uma bruxa. Aqueles que
+            a desobedecem são transformados em animais.
+          </p>
+          <div className="flex items-center gap-8 mt-4">
+            <button
+              className="flex flex-1 items-center justify-center gap-2 bg-red-300 roboto-bold uppercase px-8 py-3 rounded-[4px] text-zinc-950"
+              type="button"
+            >
+              <img className="h-6 w-6" src={Play} alt="" />
+              assistir agora
+            </button>
+            <button
+              className="flex flex-1 justify-center outline outline-2 -outline-offset-2 outline-red-300 roboto-bold uppercase px-8 py-3 rounded-[4px]"
+              type="button"
+            >
+              assista o trailer
+            </button>
           </div>
-        </section>
+        </div>
+        <div>
+          <img src={ilustracao} alt="" />
+        </div>
       </main>
     </>
   )
