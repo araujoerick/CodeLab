@@ -5,6 +5,9 @@
 body {
   color: white;
   background-image: url("./src/assets/background.png");
+  background-size: cover;
+  background-position: center;
+  height: 100dvh;
 }
 
 .font-archivo {
