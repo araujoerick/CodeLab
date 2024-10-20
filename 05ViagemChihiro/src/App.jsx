@@ -9,7 +9,7 @@ export function App() {
     <>
       <div
         style={{ backgroundImage: `url(${BgImage})` }}
-        className="h-full bg-cover bg-center text-white"
+        className="min-h-dvh bg-cover bg-center text-white"
       >
         <Header />
 
