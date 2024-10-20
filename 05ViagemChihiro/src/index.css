@@ -19,3 +19,17 @@
   font-weight: 700;
   font-style: normal;
 }
+
+.animate-bounce-custom {
+  animation: bounce 2s infinite alternate;
+  -webkit-animation: bounce 2s infinite alternate;
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-10%);
+  }
+}

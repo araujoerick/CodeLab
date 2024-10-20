@@ -2,6 +2,7 @@ import Ilustracao from './assets/ghosts.png'
 import Play from './assets/Play.svg'
 import Header from './components/Header'
 import BgImage from './assets/background.png'
+import Button from './components/Button'
 
 export function App() {
   return (
@@ -27,23 +28,12 @@ export function App() {
               que a desobedecem são transformados em animais.
             </p>
             <div className="flex flex-col md:flex-row items-center gap-8 mt-4">
-              <button
-                className="flex flex-1 w-full items-center justify-center gap-2 bg-red-300 roboto-bold uppercase px-8 py-3 rounded-[4px] text-zinc-950"
-                type="button"
-              >
-                <img className="h-6 w-6" src={Play} alt="" />
-                assistir agora
-              </button>
-              <button
-                className="flex flex-1 w-full justify-center outline outline-2 -outline-offset-2 outline-red-300 roboto-bold uppercase px-8 py-3 rounded-[4px]"
-                type="button"
-              >
-                assista o trailer
-              </button>
+              <Button icon={Play}>assistir agora</Button>
+              <Button variant="outline">assita o trailer</Button>
             </div>
           </div>
           <div className="order-first sm:px-44 md:px-0 md:order-last">
-            <img src={Ilustracao} alt="" />
+            <img className="animate-bounce-custom" src={Ilustracao} alt="" />
           </div>
         </main>
       </div>
