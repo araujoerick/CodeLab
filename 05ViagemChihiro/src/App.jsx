@@ -8,8 +8,8 @@ export function App() {
   return (
     <>
       <div
-        className="bg-cover bg-center h-dvh text-white"
         style={{ backgroundImage: `url(${BgImage})` }}
+        className="h-full bg-cover bg-center text-white"
       >
         <Header />
 
@@ -27,7 +27,7 @@ export function App() {
               Chihiro chega a um mundo mágico dominado por uma bruxa. Aqueles
               que a desobedecem são transformados em animais.
             </p>
-            <div className="flex flex-col md:flex-row items-center gap-8 mt-4">
+            <div className="flex flex-col md:flex-row items-center gap-8 mt-4 mb-10">
               <Button icon={Play}>assistir agora</Button>
               <Button variant="outline">assita o trailer</Button>
             </div>
