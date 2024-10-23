@@ -1,8 +1,13 @@
+import Header from './Components/Header'
+import Bg from './assets/bgimage.png'
+
 export function App() {
   return (
     <>
-      <h1>Hello world</h1>
-      <h2>teste</h2>
+      <Header />
+      <main>
+        <img src={Bg} alt="" />
+      </main>
     </>
   )
 }
