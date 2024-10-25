@@ -6,7 +6,7 @@ import ETH from '../assets/ETH.svg?react'
 
 const Header = () => {
   return (
-    <header className="flex items-center justify-around py-8 px-8">
+    <header className="flex items-center justify-between md:justify-around py-8 px-8">
       <div className="flex items-center gap-4">
         <ETH />
         <p className="poppins-medium text-[32px]">CodeNFT</p>
