@@ -24,4 +24,13 @@
 <p align="center">Desafio feito com React e Tailwind CSS.</p>
 <p align="center"><a href="https://chihiro-codelab.vercel.app/">Clique aqui</a> para ver o projeto.</p>
 
+##
+
+<h3 align="center"> Desafio 26 - CodeNFT </h3>
+
+![26 - CodeNFT](https://github.com/user-attachments/assets/ea02a7f7-72ea-436d-a9ac-440382a882ac)
+
+<p align="center">Desafio feito com React e Tailwind CSS.</p>
+<p align="center"><a href="https://code-nft-seven.vercel.app/">Clique aqui</a> para ver o projeto.</p>
+
 <p> Created by Erick Araújo. <a href="https://www.linkedin.com/in/araujoerick09">LinkedIn</a></p>
