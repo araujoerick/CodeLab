@@ -1,4 +1,5 @@
 import Colecionadores from './Components/Colecionadores'
+import Colecoes from './Components/Colecoes'
 import Header from './Components/Header'
 import BgImage from './assets/bgimage.png'
 
@@ -29,6 +30,13 @@ export function App() {
           Colecionadores
         </h2>
         <Colecionadores />
+      </section>
+
+      <section>
+        <h2 className="text-[40px] font-semibold py-2 mt-32 text-center">
+          Coleções
+        </h2>
+        <Colecoes />
       </section>
     </>
   )

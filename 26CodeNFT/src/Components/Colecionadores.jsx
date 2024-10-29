@@ -71,7 +71,7 @@ const Colecionadores = () => {
   ]
 
   return (
-    <ul className="flex flex-wrap gap-8 justify-center mt-9 mx-4">
+    <ul className="flex flex-wrap gap-8 justify-center mt-9 px-4 mx-auto max-w-[1900px]">
       {colecionadores.map(colecionador => (
         <li
           className="flex items-center gap-2 min-w-64 py-4 px-6 rounded-[60px] bg-[#131313]"
