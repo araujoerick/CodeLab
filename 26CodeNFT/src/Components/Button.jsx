@@ -2,7 +2,7 @@ import React from 'react'
 
 const Button = ({ variant = 'primary', children, icon: Icon, ...props }) => {
   const baseStyles =
-    'flex items-center py-3 px-6 gap-2 poppins-semibold uppercase'
+    'flex items-center py-3 px-6 gap-2 poppins-semibold uppercase w-full'
 
   const variantStyles = {
     primary: 'bg-[#131313] text-white hover:bg-[#F7FC0E] hover:text-[#131313]',
